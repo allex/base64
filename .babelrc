@@ -1,0 +1,21 @@
+{
+  "presets": [
+    [ "@babel/preset-env", {
+      "modules": false,
+      "loose": true,
+      "useBuiltIns": false,
+      "targets": {
+        "browsers": [ "last 2 versions", "not ie <= 8" ]
+      },
+      "exclude": [ "transform-typeof-symbol", "transform-function-name", "transform-classes" ]
+    } ]
+  ],
+  "plugins": [
+    [ "@babel/plugin-proposal-object-rest-spread", { "loose": true, "useBuiltIns": true }],
+    [ "@babel/plugin-proposal-decorators", { "legacy": true } ],
+    [ "@babel/plugin-proposal-class-properties", { "loose": true } ],
+    [ "@babel/plugin-transform-runtime", { "helpers": false } ],
+    [ "@babel/plugin-transform-classes", { "loose": true } ]
+  ],
+  "comments": false
+}

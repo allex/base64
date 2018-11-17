@@ -1,0 +1,73 @@
+{
+  "name": "@allex/base64",
+  "version": "1.0.0",
+  "description": "Lightweight performance optimized base64 library by Allex",
+  "jsnext:main": "lib/base64.esm.js",
+  "module": "lib/base64.esm.js",
+  "main": "lib/base64.js",
+  "unpkg": "lib/base64.min.js",
+  "combo": "lib/base64.min.js",
+  "types": "base64.d.ts",
+  "author": "allex <allex.wxn@gmail.com> (http://iallex.com/)",
+  "license": "MIT",
+  "repository": "allex/base64",
+  "keywords": [
+    "base64",
+    "urlsafe-base64"
+  ],
+  "scripts": {
+    "precommit": "npm run lint && npm test",
+    "test": "jest --coverage",
+    "unit": "jest --watch --coverage",
+    "lint": "eslint . --fix",
+    "build": "npm run lint && rollup-worker -c",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/plugin-proposal-object-rest-spread": "latest",
+    "@babel/plugin-transform-runtime": "latest",
+    "@babel/preset-env": "latest",
+    "@babel/runtime": "latest",
+    "@babel/plugin-proposal-class-properties": "latest",
+    "@babel/plugin-proposal-decorators": "latest",
+    "@babel/plugin-transform-classes": "latest",
+    "babel-core": "bridge",
+    "babel-eslint": "^8.2.2",
+    "babel-jest": "^23.6.0",
+    "eslint": "^4.18.1",
+    "eslint-config-egg": "^6.0.0",
+    "eslint-plugin-jest": "^21.12.2",
+    "husky": "^0.14.3",
+    "jest": "^23.6.0",
+    "rollup-plugin-babel": "latest",
+    "rollup-worker": "next"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "modulePaths": [
+      "src"
+    ],
+    "testMatch": [
+      "**/?(*-)+(spec|test).?(m)js"
+    ],
+    "roots": [
+      "test"
+    ],
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "transform": {
+      ".*": "babel-jest"
+    }
+  },
+  "files": [
+    "lib",
+    "*.d.ts"
+  ]
+}
