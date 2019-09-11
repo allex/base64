@@ -1,6 +1,6 @@
 {
   "name": "@allex/base64",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lightweight performance optimized base64 library by Allex",
   "jsnext:main": "lib/base64.esm.js",
   "module": "lib/base64.esm.js",
