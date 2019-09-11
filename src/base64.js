@@ -115,8 +115,11 @@ const encodeURI = u => encode(u, true)
 
 const decode = a => {
   a = String(a)
-  // Add removed at end '='
-  a += Array(5 - a.length % 4).join('=')
+  // Pad out with standard base64 required padding characters
+  const pad = a.length % 4
+  if (pad) {
+    a += Array(5 - pad).join('=')
+  }
   return _decode(
     a.replace(/[-_]/g, m0 => (m0 === '-' ? '+' : '/'))
       .replace(/[^A-Za-z0-9=\+\/]/g, '')
